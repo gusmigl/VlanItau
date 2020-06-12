@@ -91,13 +91,13 @@ function popula(lista) {
   '<tbody>' ;  
 
         
-
+        var strLista;
         for(i=0; i < lista.length; i++){
 
             
 
-            strLista+= '<tr>' +
-
+                strLista+= '<tr>' +
+            
                 '<td>'+lista[i].data+'</td>'+
 
                 '<td>'+lista[i].deptoatual.nomedepto+'</td>'+
@@ -108,7 +108,7 @@ function popula(lista) {
 
                 '<td>'+lista[i].comando+'</td>'+
 
-                '<tr>';
+                '</tr>';
 
             
 
