@@ -54,8 +54,7 @@ public class SolicitacaoController {
 			nova.setComando("switchport vlan " + depto.getEndbase() + 
 					             "; interface range " + colabobj.getNumconector() + 
 					             deptonovo.getEndbase() + "; exit");
-
-
+			
 
 			dao.save(nova);
 			return ResponseEntity.ok(nova);

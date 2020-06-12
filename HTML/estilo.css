@@ -1,13 +1,14 @@
 body{
-    background-color: black;
-    color: rgb(255,102,0);
+    background-color: white;
+    color: black;
 }
 
 .container{
-    background-color: floralwhite;    
+    background-color: whitesmoke;
+    
 }
 
 .row{
-    padding-top: 10px;
-    padding-bottom: 10px;
+    padding-top: 15px;
+    padding-bottom: 15px;
 }
