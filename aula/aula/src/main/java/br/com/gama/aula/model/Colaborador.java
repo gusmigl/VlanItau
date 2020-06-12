@@ -1,11 +1,19 @@
 package br.com.gama.aula.model;
 
+
+import java.util.List;
+
+import javax.persistence.CascadeType;
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.ManyToOne;
+import javax.persistence.OneToMany;
 import javax.persistence.Table;
+
+import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 
 /**
  * @see br.com.gama.CantorDAO.UsuarioDAO
@@ -45,8 +53,18 @@ public class Colaborador {
 	@Column(name="SENHA", length=15)
 	private String senha;
 
+	@JsonIgnoreProperties("colaborador")
+	@ManyToOne  //o dado esta em Artista
+	private Departamento departamento;
+	
+	
+	@JsonIgnoreProperties("colaborador")
+	@OneToMany(cascade=CascadeType.ALL , mappedBy="colaborador")
+	private List<Solicitacao> solicitacoes;
+
+
 	public Colaborador(int id, String racf, String email, String nome, String foto, int numseri, String descricao,
-			String numconector, String senha) {
+			String numconector, String senha, Departamento departamento, List<Solicitacao> solicitacoes) {
 		super();
 		this.id = id;
 		this.racf = racf;
@@ -57,83 +75,126 @@ public class Colaborador {
 		this.descricao = descricao;
 		this.numconector = numconector;
 		this.senha = senha;
+		this.departamento = departamento;
+		this.solicitacoes = solicitacoes;
 	}
+
 
 	public Colaborador() {
 		super();
 	}
 
+
 	public int getId() {
 		return id;
 	}
+
 
 	public void setId(int id) {
 		this.id = id;
 	}
 
+
 	public String getRacf() {
 		return racf;
 	}
+
 
 	public void setRacf(String racf) {
 		this.racf = racf;
 	}
 
+
 	public String getEmail() {
 		return email;
 	}
+
 
 	public void setEmail(String email) {
 		this.email = email;
 	}
 
+
 	public String getNome() {
 		return nome;
 	}
+
 
 	public void setNome(String nome) {
 		this.nome = nome;
 	}
 
+
 	public String getFoto() {
 		return foto;
 	}
+
 
 	public void setFoto(String foto) {
 		this.foto = foto;
 	}
 
+
 	public int getNumseri() {
 		return numseri;
 	}
+
 
 	public void setNumseri(int numseri) {
 		this.numseri = numseri;
 	}
 
+
 	public String getDescricao() {
 		return descricao;
 	}
+
 
 	public void setDescricao(String descricao) {
 		this.descricao = descricao;
 	}
 
+
 	public String getNumconector() {
 		return numconector;
 	}
+
 
 	public void setNumconector(String numconector) {
 		this.numconector = numconector;
 	}
 
+
 	public String getSenha() {
 		return senha;
 	}
 
+
 	public void setSenha(String senha) {
 		this.senha = senha;
 	}
+
+
+	public Departamento getDepartamento() {
+		return departamento;
+	}
+
+
+	public void setDepartamento(Departamento departamento) {
+		this.departamento = departamento;
+	}
+
+
+	public List<Solicitacao> getSolicitacoes() {
+		return solicitacoes;
+	}
+
+
+	public void setSolicitacoes(List<Solicitacao> solicitacoes) {
+		this.solicitacoes = solicitacoes;
+	}
+
+	
 	
 	
 	
