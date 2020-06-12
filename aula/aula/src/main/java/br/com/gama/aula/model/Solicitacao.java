@@ -44,9 +44,12 @@ public class Solicitacao {
 		
 	@Column(name="COMANDO", length=200)
 	private String comando;
+	
+	@Column(name="JUSTIFICATIVA", length=200)
+	private String justificativa;
 
 	public Solicitacao(int id, Date data, Colaborador colaborador, Departamento deptoatual, Departamento deptonovo,
-			String comando) {
+			String comando, String justificativa) {
 		super();
 		Id = id;
 		this.data = data;
@@ -54,6 +57,7 @@ public class Solicitacao {
 		this.deptoatual = deptoatual;
 		this.deptonovo = deptonovo;
 		this.comando = comando;
+		this.justificativa = justificativa;
 	}
 
 	public Solicitacao() {
@@ -100,6 +104,14 @@ public class Solicitacao {
 		this.deptonovo = deptonovo;
 	}
 
+	public String getJustificativa() {
+		return justificativa;
+	}
+
+	public void setJustificativa(String justificativa) {
+		this.justificativa = justificativa;
+	}
+	
 	public String getComando() {
 		return comando;
 	}
@@ -107,7 +119,6 @@ public class Solicitacao {
 	public void setComando(String comando) {
 		this.comando = comando;
 	}
-	
 
 	
 }

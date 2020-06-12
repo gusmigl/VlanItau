@@ -16,6 +16,7 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RestController;
 
 import br.com.gama.aula.dao.DepartamentoDAO;
+import br.com.gama.aula.model.Colaborador;
 import br.com.gama.aula.model.Departamento;
 import br.com.gama.aula.model.Solicitacao;
 
@@ -38,8 +39,7 @@ public class DepartamentoController {
 	}
 	
 	@GetMapping("/departamentos")
-	public ResponseEntity<List<Departamento>> getDepartamentos
-															(){
+	public ResponseEntity<List<Departamento>> getDepartamentos(){
 		ArrayList<Departamento> lista = (ArrayList<Departamento>)dao.findAll();
 		if (lista.size()!=0) {
 			return ResponseEntity.ok(lista);
@@ -47,6 +47,10 @@ public class DepartamentoController {
 			return ResponseEntity.status(403).build();
 		}
 	}
+	
+
+
+	
 	
 	
 }

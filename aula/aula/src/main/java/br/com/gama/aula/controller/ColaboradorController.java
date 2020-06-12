@@ -49,6 +49,8 @@ public class ColaboradorController {
 			return ResponseEntity.notFound().build();
 		}
 	}
+	
+	
 	@PostMapping("/login")
 	public ResponseEntity<Colaborador> logar(@RequestBody Colaborador colaborador) {
 		Colaborador objeto = null;

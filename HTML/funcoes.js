@@ -35,7 +35,7 @@ function login(){
             window.location="colaborador.html"
         })
         .catch(err => {
-            alert("Login Invalido");
+            alert("Login Invalido! :( ");
         })
  
     }
