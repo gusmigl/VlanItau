@@ -1,16 +1,12 @@
 package br.com.gama.aula.model;
 
 
-import java.util.List;
-
-import javax.persistence.CascadeType;
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.ManyToOne;
-import javax.persistence.OneToMany;
 import javax.persistence.Table;
 
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
@@ -57,14 +53,14 @@ public class Colaborador {
 	@ManyToOne  //o dado esta em Artista
 	private Departamento departamento;
 	
-	
+	/*
 	@JsonIgnoreProperties("colaborador")
 	@OneToMany(cascade=CascadeType.ALL , mappedBy="colaborador")
 	private List<Solicitacao> solicitacoes;
-
+	 */
 
 	public Colaborador(int id, String racf, String email, String nome, String foto, int numseri, String descricao,
-			String numconector, String senha, Departamento departamento, List<Solicitacao> solicitacoes) {
+			String numconector, String senha, Departamento departamento) {
 		super();
 		this.id = id;
 		this.racf = racf;
@@ -76,7 +72,7 @@ public class Colaborador {
 		this.numconector = numconector;
 		this.senha = senha;
 		this.departamento = departamento;
-		this.solicitacoes = solicitacoes;
+		
 	}
 
 
@@ -185,14 +181,7 @@ public class Colaborador {
 	}
 
 
-	public List<Solicitacao> getSolicitacoes() {
-		return solicitacoes;
-	}
 
-
-	public void setSolicitacoes(List<Solicitacao> solicitacoes) {
-		this.solicitacoes = solicitacoes;
-	}
 
 	
 	

@@ -28,6 +28,12 @@ public class SolicitacaoController {
 	@PostMapping ("/solicitacao/nova")
 	public ResponseEntity<Solicitacao> novaSolicitacao(@RequestBody Solicitacao nova) {
 		try {
+			
+
+			nova.setComando("TESTE DO COMANDO");
+			
+			
+			
 			dao.save(nova);
 			return ResponseEntity.ok(nova);
 		}catch(Exception e) {

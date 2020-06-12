@@ -56,3 +56,8 @@ function logout(){
     window.location="index.html";
 
 }
+
+
+function criarSolicitacao(){
+    window.location="solicitacao.html";
+}
