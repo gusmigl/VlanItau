@@ -32,7 +32,7 @@ document.getElementById("combodepto").innerHTML= strLista
 }
 
 function salvarSolicitacao(){
-
+    
     if (document.getElementById("justificativa").value == '') {
 
         alert("Informe a justificativa!");
@@ -44,7 +44,7 @@ function salvarSolicitacao(){
         var colab=JSON.parse(colabString);
 
         var data = new Date();
-        var dia = data.getDate();
+        var dia = data.getDate() +1 ;
         var mes = data.getMonth() + 1;
         var ano = data.getFullYear();
 
@@ -62,7 +62,7 @@ function salvarSolicitacao(){
                         }, 
             "comando":"", 
             "justificativa":document.getElementById("justificativa").value
-        };
+            };
 
         var cabecalho={
             method:"POST",

@@ -20,13 +20,13 @@ function carregaColaborador(){
 
         "<label><b>Departamento atual: </b>" + " " + colab.departamento.nomedepto + "</label><br>" +
 
-        "<label><b>Maquina</b></label><br>" +
+        "<label><b>Maquina:</b></label><br>" +
 
-        "<label><b>Numero Serie: </b>" + " " + colab.numseri + "</label><br>" +
+        "&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<label><b>Numero Serie: </b>" + " " + colab.numseri + "</label><br>" +
 
-        "<label><b>Descrição: </b>" + " " + colab.descricao + "</label><br>" +
+        "&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<label><b>Descrição: </b>" + " " + colab.descricao + "</label><br>" +
 
-        "<label><b>Numero Conector de Rede: </b>" + " " + colab.numconector + "</label><br>"
+        "&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<label><b>Numero Conector de Rede: </b>" + " " + colab.numconector + "</label><br>"
 
  
 

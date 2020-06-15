@@ -52,7 +52,7 @@ public class SolicitacaoController {
 			
 
 			nova.setComando("switchport vlan " + depto.getEndbase() + 
-					             "; interface range " + colabobj.getNumconector() + 
+					             "; interface range " + colabobj.getNumconector() + " " + 
 					             deptonovo.getEndbase() + "; exit");
 			
 
